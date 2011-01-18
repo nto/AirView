@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2801CFEA12BD5EB30077C9A3 /* AirPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2801CFE712BD5EB30077C9A3 /* AirPlayController.m */; };
+		2801CFEF12BD61B90077C9A3 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2801CFEE12BD61B90077C9A3 /* MediaPlayer.framework */; };
+		2812AD2912C40DA000E4564B /* HTTPReverseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 2812AD2812C40DA000E4564B /* HTTPReverseResponse.m */; };
+		2830271512BD3AFD00247F8C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2830271412BD3AFD00247F8C /* UIKit.framework */; };
+		2830271712BD3AFD00247F8C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2830271612BD3AFD00247F8C /* Foundation.framework */; };
+		2830271912BD3AFD00247F8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2830271812BD3AFD00247F8C /* CoreGraphics.framework */; };
+		2830271E12BD3AFD00247F8C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2830271C12BD3AFD00247F8C /* InfoPlist.strings */; };
+		2830272012BD3AFD00247F8C /* AirView-main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2830271F12BD3AFD00247F8C /* AirView-main.m */; };
+		2830272312BD3AFD00247F8C /* AirViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2830272212BD3AFD00247F8C /* AirViewAppDelegate.m */; };
+		2830272612BD3AFD00247F8C /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2830272412BD3AFD00247F8C /* MainWindow_iPhone.xib */; };
+		2830272912BD3AFD00247F8C /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2830272712BD3AFD00247F8C /* MainWindow_iPad.xib */; };
+		2830272C12BD3AFD00247F8C /* AirViewAppDelegate_iPhone.m in Sources */ = {isa = PBXBuildFile; fileRef = 2830272B12BD3AFD00247F8C /* AirViewAppDelegate_iPhone.m */; };
+		2830272F12BD3AFD00247F8C /* AirViewAppDelegate_iPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 2830272E12BD3AFD00247F8C /* AirViewAppDelegate_iPad.m */; };
+		2847E88412CAB22E00AED054 /* AirView iPad Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2847E88012CAB22E00AED054 /* AirView iPad Icon.png */; };
+		2847E88512CAB22E00AED054 /* AirView iPhone Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2847E88112CAB22E00AED054 /* AirView iPhone Icon.png */; };
+		2847E88612CAB22E00AED054 /* AirView iPhone Retina Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2847E88212CAB22E00AED054 /* AirView iPhone Retina Icon.png */; };
+		2847E88712CAB22E00AED054 /* AirView Large Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2847E88312CAB22E00AED054 /* AirView Large Icon.png */; };
+		28822E2212BD6B4D004B9B67 /* AirPlayHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 28822E1F12BD6B4D004B9B67 /* AirPlayHTTPConnection.m */; };
+		28822E2312BD6B4D004B9B67 /* AirPlayHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28822E2112BD6B4D004B9B67 /* AirPlayHTTPServer.m */; };
+		28C26DDE12C19C4500209D7E /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C26DDD12C19C4500209D7E /* DeviceInfo.m */; };
+		28CF3D7412BD63540019F443 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D6C12BD63540019F443 /* DDASLLogger.m */; };
+		28CF3D7512BD63540019F443 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D6E12BD63540019F443 /* DDFileLogger.m */; };
+		28CF3D7612BD63540019F443 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D7012BD63540019F443 /* DDLog.m */; };
+		28CF3D7712BD63540019F443 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D7212BD63540019F443 /* DDTTYLogger.m */; };
+		28CF3D8E12BD64270019F443 /* HTTPAsyncFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D7B12BD64270019F443 /* HTTPAsyncFileResponse.m */; };
+		28CF3D8F12BD64270019F443 /* HTTPAuthenticationRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D7D12BD64270019F443 /* HTTPAuthenticationRequest.m */; };
+		28CF3D9012BD64270019F443 /* HTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D7F12BD64270019F443 /* HTTPConnection.m */; };
+		28CF3D9112BD64270019F443 /* HTTPDataResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D8112BD64270019F443 /* HTTPDataResponse.m */; };
+		28CF3D9212BD64270019F443 /* HTTPDynamicFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D8312BD64270019F443 /* HTTPDynamicFileResponse.m */; };
+		28CF3D9312BD64270019F443 /* HTTPFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D8512BD64270019F443 /* HTTPFileResponse.m */; };
+		28CF3D9412BD64270019F443 /* HTTPMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D8812BD64270019F443 /* HTTPMessage.m */; };
+		28CF3D9512BD64270019F443 /* HTTPRedirectResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D8A12BD64270019F443 /* HTTPRedirectResponse.m */; };
+		28CF3D9612BD64270019F443 /* HTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D8D12BD64270019F443 /* HTTPServer.m */; };
+		28CF3DA212BD651C0019F443 /* DDData.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D9D12BD651C0019F443 /* DDData.m */; };
+		28CF3DA312BD651C0019F443 /* DDNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3D9F12BD651C0019F443 /* DDNumber.m */; };
+		28CF3DA412BD651C0019F443 /* DDRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3DA112BD651C0019F443 /* DDRange.m */; };
+		28CF3DAA12BD65570019F443 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3DA812BD65570019F443 /* GCDAsyncSocket.m */; };
+		28CF3DAD12BD65B70019F443 /* WebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CF3DAC12BD65B60019F443 /* WebSocket.m */; };
+		28CF3DAF12BD65F90019F443 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28CF3DAE12BD65F90019F443 /* CFNetwork.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2801CFE612BD5EB30077C9A3 /* AirPlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AirPlayController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2801CFE712BD5EB30077C9A3 /* AirPlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AirPlayController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2801CFEE12BD61B90077C9A3 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		2812AD2712C40DA000E4564B /* HTTPReverseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPReverseResponse.h; sourceTree = "<group>"; };
+		2812AD2812C40DA000E4564B /* HTTPReverseResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPReverseResponse.m; sourceTree = "<group>"; };
+		2830271112BD3AFD00247F8C /* AirView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2830271412BD3AFD00247F8C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2830271612BD3AFD00247F8C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2830271812BD3AFD00247F8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2830271A12BD3AFD00247F8C /* AirView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AirView-Info.plist"; sourceTree = "<group>"; };
+		2830271B12BD3AFD00247F8C /* AirView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AirView-Prefix.pch"; sourceTree = "<group>"; };
+		2830271D12BD3AFD00247F8C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2830271F12BD3AFD00247F8C /* AirView-main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AirView-main.m"; sourceTree = "<group>"; };
+		2830272112BD3AFD00247F8C /* AirViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AirViewAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		2830272212BD3AFD00247F8C /* AirViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AirViewAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		2830272512BD3AFD00247F8C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		2830272812BD3AFD00247F8C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow_iPad.xib; sourceTree = "<group>"; };
+		2830272A12BD3AFD00247F8C /* AirViewAppDelegate_iPhone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirViewAppDelegate_iPhone.h; sourceTree = "<group>"; };
+		2830272B12BD3AFD00247F8C /* AirViewAppDelegate_iPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirViewAppDelegate_iPhone.m; sourceTree = "<group>"; };
+		2830272D12BD3AFD00247F8C /* AirViewAppDelegate_iPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AirViewAppDelegate_iPad.h; sourceTree = "<group>"; };
+		2830272E12BD3AFD00247F8C /* AirViewAppDelegate_iPad.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AirViewAppDelegate_iPad.m; sourceTree = "<group>"; };
+		2847E88012CAB22E00AED054 /* AirView iPad Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AirView iPad Icon.png"; path = "Icons/AirView iPad Icon.png"; sourceTree = "<group>"; };
+		2847E88112CAB22E00AED054 /* AirView iPhone Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AirView iPhone Icon.png"; path = "Icons/AirView iPhone Icon.png"; sourceTree = "<group>"; };
+		2847E88212CAB22E00AED054 /* AirView iPhone Retina Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AirView iPhone Retina Icon.png"; path = "Icons/AirView iPhone Retina Icon.png"; sourceTree = "<group>"; };
+		2847E88312CAB22E00AED054 /* AirView Large Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AirView Large Icon.png"; path = "Icons/AirView Large Icon.png"; sourceTree = "<group>"; };
+		28822E1E12BD6B4D004B9B67 /* AirPlayHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AirPlayHTTPConnection.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		28822E1F12BD6B4D004B9B67 /* AirPlayHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AirPlayHTTPConnection.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		28822E2012BD6B4D004B9B67 /* AirPlayHTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AirPlayHTTPServer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		28822E2112BD6B4D004B9B67 /* AirPlayHTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AirPlayHTTPServer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		28C26DDC12C19C4500209D7E /* DeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceInfo.h; sourceTree = "<group>"; };
+		28C26DDD12C19C4500209D7E /* DeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceInfo.m; sourceTree = "<group>"; };
+		28CF3D6B12BD63540019F443 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
+		28CF3D6C12BD63540019F443 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
+		28CF3D6D12BD63540019F443 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
+		28CF3D6E12BD63540019F443 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
+		28CF3D6F12BD63540019F443 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
+		28CF3D7012BD63540019F443 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
+		28CF3D7112BD63540019F443 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
+		28CF3D7212BD63540019F443 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
+		28CF3D7A12BD64270019F443 /* HTTPAsyncFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPAsyncFileResponse.h; sourceTree = "<group>"; };
+		28CF3D7B12BD64270019F443 /* HTTPAsyncFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPAsyncFileResponse.m; sourceTree = "<group>"; };
+		28CF3D7C12BD64270019F443 /* HTTPAuthenticationRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPAuthenticationRequest.h; sourceTree = "<group>"; };
+		28CF3D7D12BD64270019F443 /* HTTPAuthenticationRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPAuthenticationRequest.m; sourceTree = "<group>"; };
+		28CF3D7E12BD64270019F443 /* HTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPConnection.h; sourceTree = "<group>"; };
+		28CF3D7F12BD64270019F443 /* HTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPConnection.m; sourceTree = "<group>"; };
+		28CF3D8012BD64270019F443 /* HTTPDataResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPDataResponse.h; sourceTree = "<group>"; };
+		28CF3D8112BD64270019F443 /* HTTPDataResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPDataResponse.m; sourceTree = "<group>"; };
+		28CF3D8212BD64270019F443 /* HTTPDynamicFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPDynamicFileResponse.h; sourceTree = "<group>"; };
+		28CF3D8312BD64270019F443 /* HTTPDynamicFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPDynamicFileResponse.m; sourceTree = "<group>"; };
+		28CF3D8412BD64270019F443 /* HTTPFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPFileResponse.h; sourceTree = "<group>"; };
+		28CF3D8512BD64270019F443 /* HTTPFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPFileResponse.m; sourceTree = "<group>"; };
+		28CF3D8612BD64270019F443 /* HTTPLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPLogging.h; sourceTree = "<group>"; };
+		28CF3D8712BD64270019F443 /* HTTPMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPMessage.h; sourceTree = "<group>"; };
+		28CF3D8812BD64270019F443 /* HTTPMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPMessage.m; sourceTree = "<group>"; };
+		28CF3D8912BD64270019F443 /* HTTPRedirectResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPRedirectResponse.h; sourceTree = "<group>"; };
+		28CF3D8A12BD64270019F443 /* HTTPRedirectResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPRedirectResponse.m; sourceTree = "<group>"; };
+		28CF3D8B12BD64270019F443 /* HTTPResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPResponse.h; sourceTree = "<group>"; };
+		28CF3D8C12BD64270019F443 /* HTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = HTTPServer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		28CF3D8D12BD64270019F443 /* HTTPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPServer.m; sourceTree = "<group>"; };
+		28CF3D9C12BD651C0019F443 /* DDData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDData.h; sourceTree = "<group>"; };
+		28CF3D9D12BD651C0019F443 /* DDData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDData.m; sourceTree = "<group>"; };
+		28CF3D9E12BD651C0019F443 /* DDNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDNumber.h; sourceTree = "<group>"; };
+		28CF3D9F12BD651C0019F443 /* DDNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDNumber.m; sourceTree = "<group>"; };
+		28CF3DA012BD651C0019F443 /* DDRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDRange.h; sourceTree = "<group>"; };
+		28CF3DA112BD651C0019F443 /* DDRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDRange.m; sourceTree = "<group>"; };
+		28CF3DA712BD65570019F443 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		28CF3DA812BD65570019F443 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		28CF3DAB12BD65B60019F443 /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocket.h; sourceTree = "<group>"; };
+		28CF3DAC12BD65B60019F443 /* WebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocket.m; sourceTree = "<group>"; };
+		28CF3DAE12BD65F90019F443 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2830270E12BD3AFD00247F8C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2830271512BD3AFD00247F8C /* UIKit.framework in Frameworks */,
+				2830271712BD3AFD00247F8C /* Foundation.framework in Frameworks */,
+				2830271912BD3AFD00247F8C /* CoreGraphics.framework in Frameworks */,
+				2801CFEF12BD61B90077C9A3 /* MediaPlayer.framework in Frameworks */,
+				28CF3DAF12BD65F90019F443 /* CFNetwork.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2830270012BD3AFD00247F8C = {
+			isa = PBXGroup;
+			children = (
+				28CF3D6912BD63540019F443 /* Logger */,
+				28CF3DA512BD65570019F443 /* TCP */,
+				28CF3D7912BD64270019F443 /* HTTP */,
+				28822E2412BD6B88004B9B67 /* AirPlay */,
+				2830270912BD3AFD00247F8C /* Classes */,
+				2830270A12BD3AFD00247F8C /* Other Sources */,
+				2830270B12BD3AFD00247F8C /* Resources */,
+				2830270C12BD3AFD00247F8C /* Frameworks */,
+				2830271212BD3AFD00247F8C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2830270712BD3AFD00247F8C /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				2830272412BD3AFD00247F8C /* MainWindow_iPhone.xib */,
+				2830272A12BD3AFD00247F8C /* AirViewAppDelegate_iPhone.h */,
+				2830272B12BD3AFD00247F8C /* AirViewAppDelegate_iPhone.m */,
+			);
+			name = iPhone;
+			path = ../iPhone;
+			sourceTree = "<group>";
+		};
+		2830270812BD3AFD00247F8C /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				2830272712BD3AFD00247F8C /* MainWindow_iPad.xib */,
+				2830272D12BD3AFD00247F8C /* AirViewAppDelegate_iPad.h */,
+				2830272E12BD3AFD00247F8C /* AirViewAppDelegate_iPad.m */,
+			);
+			name = iPad;
+			path = ../iPad;
+			sourceTree = "<group>";
+		};
+		2830270912BD3AFD00247F8C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2830272112BD3AFD00247F8C /* AirViewAppDelegate.h */,
+				2830272212BD3AFD00247F8C /* AirViewAppDelegate.m */,
+				28C26DDC12C19C4500209D7E /* DeviceInfo.h */,
+				28C26DDD12C19C4500209D7E /* DeviceInfo.m */,
+				2830270712BD3AFD00247F8C /* iPhone */,
+				2830270812BD3AFD00247F8C /* iPad */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2830270A12BD3AFD00247F8C /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				2830271B12BD3AFD00247F8C /* AirView-Prefix.pch */,
+				2830271F12BD3AFD00247F8C /* AirView-main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		2830270B12BD3AFD00247F8C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2847E87E12CAB20300AED054 /* Icons */,
+				2830271A12BD3AFD00247F8C /* AirView-Info.plist */,
+				2830271C12BD3AFD00247F8C /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2830270C12BD3AFD00247F8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				28CF3DAE12BD65F90019F443 /* CFNetwork.framework */,
+				2801CFEE12BD61B90077C9A3 /* MediaPlayer.framework */,
+				2830271412BD3AFD00247F8C /* UIKit.framework */,
+				2830271612BD3AFD00247F8C /* Foundation.framework */,
+				2830271812BD3AFD00247F8C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2830271212BD3AFD00247F8C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2830271112BD3AFD00247F8C /* AirView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2847E87E12CAB20300AED054 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				2847E88012CAB22E00AED054 /* AirView iPad Icon.png */,
+				2847E88112CAB22E00AED054 /* AirView iPhone Icon.png */,
+				2847E88212CAB22E00AED054 /* AirView iPhone Retina Icon.png */,
+				2847E88312CAB22E00AED054 /* AirView Large Icon.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		28822E2412BD6B88004B9B67 /* AirPlay */ = {
+			isa = PBXGroup;
+			children = (
+				28822E1E12BD6B4D004B9B67 /* AirPlayHTTPConnection.h */,
+				28822E1F12BD6B4D004B9B67 /* AirPlayHTTPConnection.m */,
+				28822E2012BD6B4D004B9B67 /* AirPlayHTTPServer.h */,
+				28822E2112BD6B4D004B9B67 /* AirPlayHTTPServer.m */,
+				2801CFE612BD5EB30077C9A3 /* AirPlayController.h */,
+				2801CFE712BD5EB30077C9A3 /* AirPlayController.m */,
+			);
+			name = AirPlay;
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		28CF3D6912BD63540019F443 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				28CF3D6B12BD63540019F443 /* DDASLLogger.h */,
+				28CF3D6C12BD63540019F443 /* DDASLLogger.m */,
+				28CF3D6D12BD63540019F443 /* DDFileLogger.h */,
+				28CF3D6E12BD63540019F443 /* DDFileLogger.m */,
+				28CF3D6F12BD63540019F443 /* DDLog.h */,
+				28CF3D7012BD63540019F443 /* DDLog.m */,
+				28CF3D7112BD63540019F443 /* DDTTYLogger.h */,
+				28CF3D7212BD63540019F443 /* DDTTYLogger.m */,
+			);
+			name = Logger;
+			path = CocoaLumberjack;
+			sourceTree = "<group>";
+		};
+		28CF3D7912BD64270019F443 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				28CF3D7C12BD64270019F443 /* HTTPAuthenticationRequest.h */,
+				28CF3D7D12BD64270019F443 /* HTTPAuthenticationRequest.m */,
+				28CF3D7E12BD64270019F443 /* HTTPConnection.h */,
+				28CF3D7F12BD64270019F443 /* HTTPConnection.m */,
+				28CF3D8612BD64270019F443 /* HTTPLogging.h */,
+				28CF3D8712BD64270019F443 /* HTTPMessage.h */,
+				28CF3D8812BD64270019F443 /* HTTPMessage.m */,
+				28CF3D8B12BD64270019F443 /* HTTPResponse.h */,
+				28CF3D8C12BD64270019F443 /* HTTPServer.h */,
+				28CF3D8D12BD64270019F443 /* HTTPServer.m */,
+				28CF3DAB12BD65B60019F443 /* WebSocket.h */,
+				28CF3DAC12BD65B60019F443 /* WebSocket.m */,
+				28CF3D9712BD64610019F443 /* Responses */,
+				28CF3D9B12BD64DA0019F443 /* Categories */,
+			);
+			name = HTTP;
+			path = HTTPServer;
+			sourceTree = "<group>";
+		};
+		28CF3D9712BD64610019F443 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				28CF3D7A12BD64270019F443 /* HTTPAsyncFileResponse.h */,
+				28CF3D7B12BD64270019F443 /* HTTPAsyncFileResponse.m */,
+				28CF3D8012BD64270019F443 /* HTTPDataResponse.h */,
+				28CF3D8112BD64270019F443 /* HTTPDataResponse.m */,
+				28CF3D8212BD64270019F443 /* HTTPDynamicFileResponse.h */,
+				28CF3D8312BD64270019F443 /* HTTPDynamicFileResponse.m */,
+				28CF3D8412BD64270019F443 /* HTTPFileResponse.h */,
+				28CF3D8512BD64270019F443 /* HTTPFileResponse.m */,
+				28CF3D8912BD64270019F443 /* HTTPRedirectResponse.h */,
+				28CF3D8A12BD64270019F443 /* HTTPRedirectResponse.m */,
+				2812AD2712C40DA000E4564B /* HTTPReverseResponse.h */,
+				2812AD2812C40DA000E4564B /* HTTPReverseResponse.m */,
+			);
+			name = Responses;
+			sourceTree = "<group>";
+		};
+		28CF3D9B12BD64DA0019F443 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				28CF3D9C12BD651C0019F443 /* DDData.h */,
+				28CF3D9D12BD651C0019F443 /* DDData.m */,
+				28CF3D9E12BD651C0019F443 /* DDNumber.h */,
+				28CF3D9F12BD651C0019F443 /* DDNumber.m */,
+				28CF3DA012BD651C0019F443 /* DDRange.h */,
+				28CF3DA112BD651C0019F443 /* DDRange.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		28CF3DA512BD65570019F443 /* TCP */ = {
+			isa = PBXGroup;
+			children = (
+				28CF3DA712BD65570019F443 /* GCDAsyncSocket.h */,
+				28CF3DA812BD65570019F443 /* GCDAsyncSocket.m */,
+			);
+			name = TCP;
+			path = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2830271012BD3AFD00247F8C /* AirView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2830273212BD3AFD00247F8C /* Build configuration list for PBXNativeTarget "AirView" */;
+			buildPhases = (
+				2830270D12BD3AFD00247F8C /* Sources */,
+				2830270E12BD3AFD00247F8C /* Frameworks */,
+				2830270F12BD3AFD00247F8C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirView;
+			productName = AirView;
+			productReference = 2830271112BD3AFD00247F8C /* AirView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2830270212BD3AFD00247F8C /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2830270512BD3AFD00247F8C /* Build configuration list for PBXProject "AirView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2830270012BD3AFD00247F8C;
+			productRefGroup = 2830271212BD3AFD00247F8C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2830271012BD3AFD00247F8C /* AirView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2830270F12BD3AFD00247F8C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2830271E12BD3AFD00247F8C /* InfoPlist.strings in Resources */,
+				2830272612BD3AFD00247F8C /* MainWindow_iPhone.xib in Resources */,
+				2830272912BD3AFD00247F8C /* MainWindow_iPad.xib in Resources */,
+				2847E88412CAB22E00AED054 /* AirView iPad Icon.png in Resources */,
+				2847E88512CAB22E00AED054 /* AirView iPhone Icon.png in Resources */,
+				2847E88612CAB22E00AED054 /* AirView iPhone Retina Icon.png in Resources */,
+				2847E88712CAB22E00AED054 /* AirView Large Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2830270D12BD3AFD00247F8C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2830272012BD3AFD00247F8C /* AirView-main.m in Sources */,
+				2830272312BD3AFD00247F8C /* AirViewAppDelegate.m in Sources */,
+				2830272C12BD3AFD00247F8C /* AirViewAppDelegate_iPhone.m in Sources */,
+				2830272F12BD3AFD00247F8C /* AirViewAppDelegate_iPad.m in Sources */,
+				2801CFEA12BD5EB30077C9A3 /* AirPlayController.m in Sources */,
+				28CF3D7412BD63540019F443 /* DDASLLogger.m in Sources */,
+				28CF3D7512BD63540019F443 /* DDFileLogger.m in Sources */,
+				28CF3D7612BD63540019F443 /* DDLog.m in Sources */,
+				28CF3D7712BD63540019F443 /* DDTTYLogger.m in Sources */,
+				28CF3D8E12BD64270019F443 /* HTTPAsyncFileResponse.m in Sources */,
+				28CF3D8F12BD64270019F443 /* HTTPAuthenticationRequest.m in Sources */,
+				28CF3D9012BD64270019F443 /* HTTPConnection.m in Sources */,
+				28CF3D9112BD64270019F443 /* HTTPDataResponse.m in Sources */,
+				28CF3D9212BD64270019F443 /* HTTPDynamicFileResponse.m in Sources */,
+				28CF3D9312BD64270019F443 /* HTTPFileResponse.m in Sources */,
+				28CF3D9412BD64270019F443 /* HTTPMessage.m in Sources */,
+				28CF3D9512BD64270019F443 /* HTTPRedirectResponse.m in Sources */,
+				28CF3D9612BD64270019F443 /* HTTPServer.m in Sources */,
+				28CF3DA212BD651C0019F443 /* DDData.m in Sources */,
+				28CF3DA312BD651C0019F443 /* DDNumber.m in Sources */,
+				28CF3DA412BD651C0019F443 /* DDRange.m in Sources */,
+				28CF3DAA12BD65570019F443 /* GCDAsyncSocket.m in Sources */,
+				28CF3DAD12BD65B70019F443 /* WebSocket.m in Sources */,
+				28822E2212BD6B4D004B9B67 /* AirPlayHTTPConnection.m in Sources */,
+				28822E2312BD6B4D004B9B67 /* AirPlayHTTPServer.m in Sources */,
+				28C26DDE12C19C4500209D7E /* DeviceInfo.m in Sources */,
+				2812AD2912C40DA000E4564B /* HTTPReverseResponse.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2830271C12BD3AFD00247F8C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2830271D12BD3AFD00247F8C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2830272412BD3AFD00247F8C /* MainWindow_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2830272512BD3AFD00247F8C /* en */,
+			);
+			name = MainWindow_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		2830272712BD3AFD00247F8C /* MainWindow_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2830272812BD3AFD00247F8C /* en */,
+			);
+			name = MainWindow_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2815C80212C65FC7000FC5A4 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Clement Vasseur";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7E41CF06-2727-44F8-BBA0-D7B4D11E39A6";
+				SDKROOT = iphoneos4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "App Store";
+		};
+		2815C80312C65FC7000FC5A4 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirView-Prefix.pch";
+				INFOPLIST_FILE = "AirView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = "App Store";
+		};
+		2830273012BD3AFD00247F8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2830273112BD3AFD00247F8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D3DC2D31-675A-4D8C-8E19-50DB7B1164D3";
+				SDKROOT = iphoneos4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2830273312BD3AFD00247F8C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirView-Prefix.pch";
+				INFOPLIST_FILE = "AirView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2830273412BD3AFD00247F8C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirView-Prefix.pch";
+				INFOPLIST_FILE = "AirView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		2835A54112BEAFAA00E883E1 /* Ad Hoc Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Clement Vasseur";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D3DC2D31-675A-4D8C-8E19-50DB7B1164D3";
+				SDKROOT = iphoneos4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Ad Hoc Distribution";
+		};
+		2835A54212BEAFAA00E883E1 /* Ad Hoc Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AirView-Prefix.pch";
+				INFOPLIST_FILE = "AirView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad Hoc Distribution";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2830270512BD3AFD00247F8C /* Build configuration list for PBXProject "AirView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2830273012BD3AFD00247F8C /* Debug */,
+				2830273112BD3AFD00247F8C /* Release */,
+				2815C80212C65FC7000FC5A4 /* App Store */,
+				2835A54112BEAFAA00E883E1 /* Ad Hoc Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "App Store";
+		};
+		2830273212BD3AFD00247F8C /* Build configuration list for PBXNativeTarget "AirView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2830273312BD3AFD00247F8C /* Debug */,
+				2830273412BD3AFD00247F8C /* Release */,
+				2815C80312C65FC7000FC5A4 /* App Store */,
+				2835A54212BEAFAA00E883E1 /* Ad Hoc Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = "App Store";
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2830270212BD3AFD00247F8C /* Project object */;
+}
