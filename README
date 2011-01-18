@@ -1,0 +1,28 @@
+AirView - AirPlay viewer for iOS devices
+Copyright (c) 2010 Clément Vasseur <clement.vasseur@gmail.com>
+
+Use this application to watch AirPlay video streams from another iOS device
+(iPhone, iPod Touch or iPad running iOS 4.2) on the same local network, or from
+iTunes.
+
+Just launch AirView, then tap the AirPlay icon on the YouTube media player from
+another iPhone for example, and the video should start playing on AirView. This
+works with videos played in iTunes on a Mac or PC too.
+
+Photos are not supported yet.
+
+
+Copyright
+=========
+
+AirView is under the Simplified BSD License.
+http://github.com/nto/AirView/
+
+CocoaHTTPServer is under the New BSD License.
+http://code.google.com/p/cocoahttpserver/
+
+CocoaLumberjack is under the New BSD License.
+http://code.google.com/p/cocoalumberjack/
+
+The CocoaAsyncSocket project is under Public Domain license.
+http://code.google.com/p/cocoaasyncsocket/
