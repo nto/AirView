@@ -177,7 +177,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 		NSData *postData = [request body];
 		NSArray *headers;
 		NSURL *url = nil;
-		NSTimeInterval start_position = 0;
+		float start_position = 0;
 
 		if (postData)
 			postStr = [[[NSString alloc] initWithData:postData encoding:NSUTF8StringEncoding] autorelease];
@@ -194,12 +194,12 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 				if ([key isEqualToString:@"Content-Location"])
 					url = [NSURL URLWithString:value];
 				else if ([key isEqualToString:@"Start-Position"])
-					start_position = [value doubleValue];
+					start_position = [value floatValue];
 			}
 		}
 
 		if (url)
-			[airplay play:url atPosition:start_position];
+			[airplay play:url atRelativePosition:start_position];
 
 		return [[[HTTPDataResponse alloc] initWithData:nil] autorelease];
 	}

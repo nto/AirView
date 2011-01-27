@@ -68,7 +68,7 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 	[httpServer stop];
 }
 
-- (void)play:(NSURL *)location atPosition:(NSTimeInterval)position
+- (void)play:(NSURL *)location atRelativePosition:(float)position
 {
 	DDLogVerbose(@"AirPlayController: play %@", location);
 
@@ -79,10 +79,8 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 		} else {
 			[player setContentURL:location];
 		}
-//		if (position > 0) {
-//			DDLogVerbose(@"AirPlayController: set initial playback time to %f", position);
-//			player.initialPlaybackTime = position;
-//		}
+		start_position = position;
+
 		[window addSubview:playerView.view];
 		player.fullscreen = YES;
 
@@ -90,6 +88,11 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 							 selector:@selector(movieFinishedCallback:)
 							     name:MPMoviePlayerPlaybackDidFinishNotification
 							   object:player];
+
+		[[NSNotificationCenter defaultCenter] addObserver:self
+												 selector:@selector(durationAvailableCallback:)
+													 name:MPMovieDurationAvailableNotification
+												   object:player];
 
 		[player play];
 	});
@@ -104,6 +107,22 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 						      object:[notification object]];
 
 	[self stopPlayer];
+}
+
+- (void)durationAvailableCallback:(NSNotification *)notification
+{
+	DDLogVerbose(@"AirPlayController: duration available");
+
+	[[NSNotificationCenter defaultCenter] removeObserver:self
+													name:MPMovieDurationAvailableNotification
+												  object:[notification object]];
+
+	NSTimeInterval duration = [[notification object] duration];
+
+	if (player.playbackState ==  MPMoviePlaybackStateStopped)
+		player.initialPlaybackTime = duration * start_position;
+	else
+		player.currentPlaybackTime = duration * start_position;
 }
 
 - (void)stopPlayer

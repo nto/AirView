@@ -16,13 +16,14 @@
     MPMoviePlayerViewController *playerView;
     MPMoviePlayerController *player;
     UIWindow *window;
+    float start_position;
 }
 
 - (id)initWithWindow:(UIView *)uiWindow;
 - (void)startServer;
 - (void)stopServer;
 - (void)stopPlayer;
-- (void)play:(NSURL *)location atPosition:(NSTimeInterval)position;
+- (void)play:(NSURL *)location atRelativePosition:(float)position;
 - (void)stop;
 - (void)setPosition:(float)position;
 - (float)position;
