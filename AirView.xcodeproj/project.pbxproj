@@ -24,6 +24,7 @@
 		2847E88512CAB22E00AED054 /* AirView iPhone Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2847E88112CAB22E00AED054 /* AirView iPhone Icon.png */; };
 		2847E88612CAB22E00AED054 /* AirView iPhone Retina Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2847E88212CAB22E00AED054 /* AirView iPhone Retina Icon.png */; };
 		2847E88712CAB22E00AED054 /* AirView Large Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2847E88312CAB22E00AED054 /* AirView Large Icon.png */; };
+		2852107A12F101AD00CD3C18 /* AirPlay Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2852107912F101AD00CD3C18 /* AirPlay Icon.png */; };
 		28822E2212BD6B4D004B9B67 /* AirPlayHTTPConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 28822E1F12BD6B4D004B9B67 /* AirPlayHTTPConnection.m */; };
 		28822E2312BD6B4D004B9B67 /* AirPlayHTTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 28822E2112BD6B4D004B9B67 /* AirPlayHTTPServer.m */; };
 		28C26DDE12C19C4500209D7E /* DeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C26DDD12C19C4500209D7E /* DeviceInfo.m */; };
@@ -74,6 +75,7 @@
 		2847E88112CAB22E00AED054 /* AirView iPhone Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AirView iPhone Icon.png"; path = "Icons/AirView iPhone Icon.png"; sourceTree = "<group>"; };
 		2847E88212CAB22E00AED054 /* AirView iPhone Retina Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AirView iPhone Retina Icon.png"; path = "Icons/AirView iPhone Retina Icon.png"; sourceTree = "<group>"; };
 		2847E88312CAB22E00AED054 /* AirView Large Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AirView Large Icon.png"; path = "Icons/AirView Large Icon.png"; sourceTree = "<group>"; };
+		2852107912F101AD00CD3C18 /* AirPlay Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "AirPlay Icon.png"; path = "Icons/AirPlay Icon.png"; sourceTree = "<group>"; };
 		28822E1E12BD6B4D004B9B67 /* AirPlayHTTPConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AirPlayHTTPConnection.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		28822E1F12BD6B4D004B9B67 /* AirPlayHTTPConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AirPlayHTTPConnection.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		28822E2012BD6B4D004B9B67 /* AirPlayHTTPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AirPlayHTTPServer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -229,6 +231,7 @@
 		2847E87E12CAB20300AED054 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				2852107912F101AD00CD3C18 /* AirPlay Icon.png */,
 				2847E88012CAB22E00AED054 /* AirView iPad Icon.png */,
 				2847E88112CAB22E00AED054 /* AirView iPhone Icon.png */,
 				2847E88212CAB22E00AED054 /* AirView iPhone Retina Icon.png */,
@@ -385,6 +388,7 @@
 				2847E88512CAB22E00AED054 /* AirView iPhone Icon.png in Resources */,
 				2847E88612CAB22E00AED054 /* AirView iPhone Retina Icon.png in Resources */,
 				2847E88712CAB22E00AED054 /* AirView Large Icon.png in Resources */,
+				2852107A12F101AD00CD3C18 /* AirPlay Icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
