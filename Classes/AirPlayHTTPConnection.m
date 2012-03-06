@@ -84,7 +84,9 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 		    [path isEqualToString:@"/play"] ||
 		    [path isEqualToString:@"/stop"] ||
 			  [path hasPrefix:@"/scrub?position="] ||
-			  [path hasPrefix:@"/rate?value="])
+            [path hasPrefix:@"/rate?value="]||
+            [path hasPrefix:@"/getProperty?playbackAccessLog"]||
+            [path hasPrefix:@"/getProperty?playbackErrorLog"])
 			return YES;
 	}
   
@@ -92,7 +94,9 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
   
 	if ([method isEqualToString:@"PUT"])
 	{
-		if ([path isEqualToString:@"/photo"])
+		if ([path isEqualToString:@"/photo"]||
+            [path hasPrefix:@"/setProperty?forwardEndTime"]||
+            [path hasPrefix:@"/setProperty?reverseEndTime"])
 			return YES;
 	}
   
@@ -161,14 +165,56 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
 		return [res autorelease];
 	}
   
-  
-	if ([method isEqualToString:@"PUT"] && [path isEqualToString:@"/photo"])
-	{
-		HTTPLogVerbose(@"%@[%p]: PUT (%qu) %@", THIS_FILE, self, requestContentLength, path);
-    
-		return [[[HTTPDataResponse alloc] initWithData:nil] autorelease];
-	}
-  
+  	if ([method isEqualToString:@"PUT"])
+    {
+        if ([path isEqualToString:@"/photo"])
+        {
+            HTTPLogVerbose(@"%@[%p]: PUT (%qu) %@", THIS_FILE, self, requestContentLength, path);
+            
+            return [[[HTTPDataResponse alloc] initWithData:nil] autorelease];
+        }
+        else if ([path isEqualToString:@"/setProperty?forwardEndTime"])
+        {
+            // In iOS 5 this command is accompanied by a dictionary 
+            //{
+            //  value =     {
+            //    epoch = 0;
+            //    flags = 0;
+            //    timescale = 0;
+            //    value = 0;
+            //};}
+            
+            NSString *error;
+            NSDictionary *dict = (NSDictionary *)[NSPropertyListSerialization
+                                                  propertyListFromData:[request body] 
+                                                  mutabilityOption:NSPropertyListImmutable 
+                                                  format:NULL 
+                                                  errorDescription:&error ];
+            HTTPLogVerbose(@"%@[%p]: PUT (%qu) %@\n%@\n%@\n", THIS_FILE, self, requestContentLength, path, [dict description], error);
+            return [[[HTTPDataResponse alloc] initWithData:nil] autorelease];
+        }
+        else if ([path isEqualToString:@"/setProperty?reverseEndTime"])
+        {
+            // In iOS 5 this command is accompanied by a dictionary 
+            //{
+            //  value =     {
+            //    epoch = 0;
+            //    flags = 0;
+            //    timescale = 0;
+            //    value = 0;
+            //};}
+            
+            NSString *error;
+            NSDictionary *dict = (NSDictionary *)[NSPropertyListSerialization
+                                                  propertyListFromData:[request body] 
+                                                  mutabilityOption:NSPropertyListImmutable 
+                                                  format:NULL 
+                                                  errorDescription:&error ];
+            HTTPLogVerbose(@"%@[%p]: PUT (%qu) %@\n%@\n%@\n", THIS_FILE, self, requestContentLength, path, [dict description], error);
+            return [[[HTTPDataResponse alloc] initWithData:nil] autorelease];
+        }
+        
+    }
   
 	if (![method isEqualToString:@"POST"])
 		return [super httpResponseForMethod:method URI:path];
@@ -193,6 +239,16 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_VERBOSE; // | HTTP_LOG_FLAG_TRACE
     
 		return [[[HTTPDataResponse alloc] initWithData:nil] autorelease];
 	}
+    else if ([path isEqualToString:@"/getProperty?playbackAccessLog"])
+    {
+        HTTPLogVerbose(@"%@[%p]: POST (%qu) %@", THIS_FILE, self, requestContentLength, path);
+        return [[[HTTPDataResponse alloc] initWithData:nil] autorelease];
+    }
+    else if ([path isEqualToString:@"/getProperty?playbackErrorLog"])
+    {
+        HTTPLogVerbose(@"%@[%p]: POST (%qu) %@", THIS_FILE, self, requestContentLength, path);
+        return [[[HTTPDataResponse alloc] initWithData:nil] autorelease];
+    }
 	else if ([path isEqualToString:@"/stop"])
 	{
 		[airplay stop];

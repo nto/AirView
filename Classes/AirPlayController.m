@@ -45,7 +45,10 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 
 		playerView = [[MPMoviePlayerViewController alloc] initWithContentURL:nil];
 		player = playerView.moviePlayer;
-	}
+        if([player respondsToSelector:@selector(setAllowsAirPlay:)]) {
+            player.allowsAirPlay = NO;
+        }	
+    }
 
     return self;
 }
@@ -76,6 +79,9 @@ static const int ddLogLevel = LOG_LEVEL_INFO;
 		if (playerView == nil) {
 			playerView = [[MPMoviePlayerViewController alloc] initWithContentURL:location];
 			player = playerView.moviePlayer;
+            if([player respondsToSelector:@selector(setAllowsAirPlay:)]) {
+                player.allowsAirPlay = NO;
+            }	
 		} else {
 			[player setContentURL:location];
 		}
